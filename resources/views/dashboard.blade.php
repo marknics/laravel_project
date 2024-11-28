@@ -79,7 +79,7 @@
                                 <td class= "py-2 border-b px-4">{{$student ->address}}</td>
                                 <td class= "py-2 border-b px-4">
                                     <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
-                                    <form action="POST" action={{route('student.destroy', $student ->id)}} style="display:inline;"> 
+                                    <form method="POST" action="{{route('student.destroy', $student ->id)}}" style="display:inline;"> 
                                         @csrf
                                         @method('DELETE')
                                     <button type="submit" class="text-red-500 hover:text-red-700" >Delete</button>
